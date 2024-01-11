@@ -1,14 +1,11 @@
 const express= require('express')
-// const multer = require('multer');
+
 const PDFDocument = require('pdfkit');
 const axios = require('axios')
-const path = require('path')
-// const {DataModel} = require('../models/formDataModel')
 const {authentication} = require('../middleware/authentication')
-// const {imageUpload} = require('../middleware/upload')
+
 const {DataModel} = require('../models/formDataModel')
 const dataRouter= express.Router()
-const generatePDF = require('../utils/generatePDF')
 
  //Routes for storing  user data 
 dataRouter.post("/data",authentication,async(req,res)=>{
