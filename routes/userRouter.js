@@ -58,7 +58,7 @@ userRouter.post('/signup', async (req, res) => {
 		expiresIn: '1h', // Token expires in 1 hour
 	  });
        const {_id,name}= user
-	//    res.cookie('token', token, { httpOnly: true })
+	
 	  res.status(200).send({ "msg":"Login Successfull","Token":token, user:{_id,name}});
 	} catch (error) {
 		console.log(error.message)
